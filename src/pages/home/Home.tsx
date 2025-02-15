@@ -1,10 +1,13 @@
 import MainLayout from "../../layout/MainLayout";
+import StoriesContainer from "../../components/others/StoriesContainer";
 
 export const Homepage = () => {
   return (
     <>
       <MainLayout>
-        <div>this is the Homepage</div>
+        <div className="mx-auto max-w-2xl">
+          <StoriesContainer />
+        </div>
       </MainLayout>
     </>
   );

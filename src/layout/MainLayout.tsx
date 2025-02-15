@@ -16,7 +16,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         </div>
 
         {/* Main Content */}
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 py-2">{children}</main>
 
         {/* Right Sidebar */}
         <div className="h-screen w-full max-w-[300px]">

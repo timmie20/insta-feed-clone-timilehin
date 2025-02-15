@@ -45,7 +45,7 @@ export default function Leftbar() {
   };
   return (
     <nav
-      className="flex h-full w-full flex-1 flex-col rounded-md bg-white p-3"
+      className="flex h-full w-full flex-1 flex-col rounded-lg border-[1px] border-slate-200 bg-white p-3"
       role="navigation"
       aria-label="Main Navigation"
     >

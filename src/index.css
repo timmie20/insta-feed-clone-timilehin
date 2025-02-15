@@ -18,6 +18,16 @@ body {
   font-family: "Inter", serif;
 }
 
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .nav-items {
   @apply transition-all duration-150 hover:bg-zinc-300;
 }
