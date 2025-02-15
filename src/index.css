@@ -1,1 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+
+:root {
+  --inter: "Inter", serif;
+  --delicious-handrawn: "Delicious Handrawn", serif;
+}
+
+@theme {
+  --font-delicious-handrawn: "Delicious Handrawn", serif;
+}
+
+html {
+  overscroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", serif;
+}
+
+.nav-items {
+  @apply transition-all duration-150 hover:bg-zinc-300;
+}
