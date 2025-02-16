@@ -4,6 +4,8 @@
 :root {
   --inter: "Inter", serif;
   --delicious-handrawn: "Delicious Handrawn", serif;
+
+  --story-container-height: 250px;
 }
 
 @theme {

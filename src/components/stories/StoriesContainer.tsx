@@ -5,7 +5,7 @@ import { stories } from "../../data";
 export default function StoriesContainer() {
   return (
     <div
-      className="max-h-[250px] w-full overflow-hidden rounded-t-lg border-[1px] border-slate-200 bg-white p-4"
+      className="max-h-[var(--story-container-height)] w-full overflow-hidden rounded-t-lg border-[1px] border-slate-200 bg-white p-4"
       role="region"
       aria-label="User stories"
     >
