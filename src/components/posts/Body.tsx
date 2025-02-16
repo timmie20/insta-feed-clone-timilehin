@@ -2,7 +2,7 @@ import React from "react";
 import Actions from "./Actions";
 import { PostProps } from "../../types";
 
-export default function Body({ body, imgUrl, reactions }: PostProps) {
+export default function Body({ body, imgUrl, reactions, id }: PostProps) {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleToggle = () => {
@@ -14,12 +14,12 @@ export default function Body({ body, imgUrl, reactions }: PostProps) {
       <div className="mt-4">
         <img
           src={imgUrl}
-          alt="Beauty Product"
+          alt="image"
           className="h-auto w-full rounded-lg object-cover"
         />
       </div>
 
-      <Actions reactions={reactions} />
+      <Actions reactions={reactions} id={id} />
 
       {/* Post Details */}
       <div className="flex items-end px-2">
