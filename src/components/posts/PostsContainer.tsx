@@ -4,8 +4,8 @@ import Posts from "./Posts";
 export default function PostsContainer() {
   return (
     <div
-      className="w-full"
-      style={{ minHeight: "calc(100vh - var(--story-container-height))" }}
+      className="w-full overflow-scroll"
+      style={{ height: "calc(97vh - var(--story-container-height))" }}
     >
       <Posts />
     </div>

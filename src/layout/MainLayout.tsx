@@ -11,7 +11,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
     <div className="h-screen w-screen bg-neutral-100">
       <div className="mx-auto flex max-w-screen-xl overflow-hidden">
         {/* Left Sidebar */}
-        <div className="w-full max-w-[250px] py-2">
+        <div className="max-h-[850px] w-full max-w-[250px] py-1">
           <Leftbar />
         </div>
 
@@ -19,7 +19,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <main className="flex-1 py-2">{children}</main>
 
         {/* Right Sidebar */}
-        <div className="h-screen w-full max-w-[300px]">
+        <div className="h-screen w-full max-w-[300px] py-1">
           <Rightbar />
         </div>
       </div>
