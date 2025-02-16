@@ -1,7 +1,8 @@
 import React from "react";
 import Actions from "./Actions";
+import { PostProps } from "../../types";
 
-export default function Body() {
+export default function Body({ body, imgUrl, reactions }: PostProps) {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleToggle = () => {
@@ -12,25 +13,20 @@ export default function Body() {
     <>
       <div className="mt-4">
         <img
-          src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww"
+          src={imgUrl}
           alt="Beauty Product"
           className="h-auto w-full rounded-lg object-cover"
         />
       </div>
 
-      <Actions />
+      <Actions reactions={reactions} />
 
       {/* Post Details */}
-      <div className="mt-4 flex items-end px-2">
-        <p className={`${!isExpanded && "truncate"} text-sm`}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-          consequuntur beatae nam vel? Eaque nostrum, eveniet quisquam illum
-          soluta reprehenderit molestias. Quam in voluptate nemo quaerat aliquam
-          repudiandae fugiat iure.
-        </p>
+      <div className="flex items-end px-2">
+        <p className={`${!isExpanded && "truncate"} text-sm`}>{body}</p>
         <button
           onClick={handleToggle}
-          className="shrink-0 text-xs text-blue-500"
+          className="shrink-0 cursor-pointer text-xs text-blue-500"
         >
           {isExpanded ? "Show Less" : "Show More"}
         </button>

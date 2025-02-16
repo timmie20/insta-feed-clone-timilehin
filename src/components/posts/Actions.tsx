@@ -1,7 +1,8 @@
 import React from "react";
 import { Heart, Bookmark, MessageCircle, Send } from "lucide-react";
+import { PostProps } from "../../types";
 
-export default function Actions() {
+export default function Actions({ reactions }: PostProps) {
   return (
     <>
       <div className="mt-4 flex items-center justify-between">
@@ -12,6 +13,7 @@ export default function Actions() {
         </div>
         <Bookmark />
       </div>
+      <span className="text-xs">{`${reactions?.likes} likes`}</span>
     </>
   );
 }
