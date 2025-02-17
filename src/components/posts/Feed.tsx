@@ -67,6 +67,8 @@ export default function Feed() {
           <Post post={post} />
         </div>
       ))}
+      {loading && <div>Loading...</div>}
+      {!loading && posts?.posts.length === 0 && <div>No posts available</div>}
     </div>
   );
 }

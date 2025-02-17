@@ -1,11 +1,17 @@
 import React, { forwardRef } from "react";
 import Header from "./Header";
 import Body from "./Body";
-import Comments from "./Comments";
 import { PostProps } from "../../types";
+import Comments from "./Comments";
 
 const Post = forwardRef<HTMLDivElement, { post: PostProps }>(
   ({ post }, ref) => {
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    const handleToggle = () => {
+      setIsOpen(!isOpen);
+    };
+
     return (
       <div
         ref={ref} // Attach ref to the post container
@@ -17,8 +23,14 @@ const Post = forwardRef<HTMLDivElement, { post: PostProps }>(
           imgUrl={post.imgUrl || ""}
           reactions={post.reactions}
           id={post.id}
-        />
-        <Comments />
+        />{" "}
+        <button
+          onClick={handleToggle}
+          className="shrink-0 cursor-pointer text-xs text-slate-400"
+        >
+          {!isOpen ? "See comments" : "Hide comments"}
+        </button>
+        <Comments isOpen={isOpen} />
       </div>
     );
   },

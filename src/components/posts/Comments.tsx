@@ -1,32 +1,27 @@
 import React from "react";
-import { Send } from "lucide-react";
+import AddComments from "./AddComments";
 
-export default function Comments() {
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+export default function Comments({ isOpen }: { isOpen: boolean }) {
   return (
-    <div className="mt-2">
-      <button
-        onClick={handleToggle}
-        className="shrink-0 cursor-pointer text-xs text-slate-400"
-      >
-        {!isOpen ? "See comments" : "Hide comments"}
-      </button>
-
-      <div className="flex w-full items-center justify-between">
-        <input
-          className="w-10/12 border-b-[1px] border-slate-300 py-1.5 text-xs focus:outline-none"
-          type="text"
-          placeholder="Add a comment"
-          autoComplete="off"
-        />
-        <button className="inline-flex cursor-pointer items-center gap-1.5 rounded-md bg-pink-600 px-2.5 py-1.5 text-xs text-white">
-          send <Send size={14} />
-        </button>
-      </div>
+    <div className="">
+      {isOpen && <CommentsList />}
+      <AddComments />
     </div>
   );
 }
+
+export const CommentsList = () => {
+  return (
+    <>
+      <div className="h-20 w-full max-w-[70%] overflow-scroll py-2">
+        <ul className="space-y-1.5 px-2">
+          {Array.from({ length: 12 }, (_, i) => (
+            <li key={i} className="text-xs">
+              comment {i + 1}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+};

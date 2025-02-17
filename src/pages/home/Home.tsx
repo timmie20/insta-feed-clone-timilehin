@@ -34,7 +34,7 @@ export const Homepage = () => {
     <>
       <MainLayout>
         <div className="relative mx-auto max-w-2xl space-y-2">
-          <div className="sticky top-0 z-10 bg-[whitesmoke] pt-2">
+          <div className="sticky top-0 z-30 bg-[whitesmoke] pt-2">
             <StoriesContainer />
           </div>
           <Feed />
