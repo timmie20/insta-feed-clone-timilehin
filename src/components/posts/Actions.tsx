@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Bookmark, MessageCircle, Send } from "lucide-react";
 import { PostProps } from "../../types";
 import LikeButton from "../icon/LikeButton";

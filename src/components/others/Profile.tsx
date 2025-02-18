@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Profile() {
   return (
     <div className="rounded-lg border-[1px] border-slate-200 bg-gradient-to-br from-pink-600 to-violet-600 px-3 py-4 shadow-sm">
