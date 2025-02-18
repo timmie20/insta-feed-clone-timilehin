@@ -1,4 +1,3 @@
-import React from "react";
 import AddComments from "./AddComments";
 
 export default function Comments({ isOpen }: { isOpen: boolean }) {

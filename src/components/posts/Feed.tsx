@@ -58,7 +58,7 @@ export default function Feed() {
   };
 
   return (
-    <div className="w-full space-y-3 overflow-scroll">
+    <div className="w-full space-y-3 overflow-scroll px-2 min-[320px]:max-w-[360px] sm:px-4 md:max-w-screen-sm">
       {posts?.posts.map((post, index) => (
         <div
           key={post.id}

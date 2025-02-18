@@ -14,8 +14,8 @@ const Post = forwardRef<HTMLDivElement, { post: PostProps }>(
 
     return (
       <div
-        ref={ref} // Attach ref to the post container
-        className="mx-auto h-fit max-w-lg rounded-md bg-white px-3 pt-3 pb-5 shadow-sm"
+        ref={ref}
+        className="mx-auto h-fit w-full rounded-md bg-white p-2 shadow-sm sm:p-4 md:max-w-md"
       >
         <Header />
         <Body
@@ -23,7 +23,7 @@ const Post = forwardRef<HTMLDivElement, { post: PostProps }>(
           imgUrl={post.imgUrl || ""}
           reactions={post.reactions}
           id={post.id}
-        />{" "}
+        />
         <button
           onClick={handleToggle}
           className="shrink-0 cursor-pointer text-xs text-slate-400"

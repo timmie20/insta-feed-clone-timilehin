@@ -5,12 +5,12 @@ import { stories } from "../../data";
 export default function StoriesContainer() {
   return (
     <div
-      className="h-[var(--story-container-height)] w-full overflow-hidden rounded-t-lg border-[1px] border-slate-200 bg-white p-4"
+      className="relative z-10 h-[120px] w-full overflow-hidden rounded-t-lg border-[1px] border-slate-200 bg-white p-4 shadow-sm"
       role="region"
       aria-label="User stories"
     >
       <div
-        className="flex gap-6 overflow-x-auto scroll-smooth"
+        className="flex gap-4 overflow-x-auto scroll-smooth sm:gap-6"
         role="list"
         aria-label="Story list"
       >
